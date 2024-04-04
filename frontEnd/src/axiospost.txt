@@ -1,0 +1,20 @@
+import axios from 'axios';
+
+// Define the data you want to send in the POST request
+const postData = {
+  key1: 'value1',
+  key2: 'value2'
+};
+
+// Define the URL to which you want to send the POST request
+const url = 'https://example.com/api';
+
+// Make the POST request using Axios with try-catch for error handling
+try {
+  const response = await axios.post(url, postData);
+  // Handle success
+  console.log('Response:', response.data);
+} catch (error) {
+  // Handle error
+  console.error('Error:', error);
+}
